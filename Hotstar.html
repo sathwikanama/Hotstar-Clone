@@ -1,0 +1,438 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotstar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scrollbar-width: none;
+        }
+
+        .container {
+            background-color: rgb(0, 0, 0);
+            width: 100%;
+            height: 540vh;
+        }
+        body{
+            background-color: #000000;
+        }
+        nav {
+            background-color: rgb(0, 0, 0);
+            width: 15vw;
+            height: 100vh;
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .logo {
+            margin-top: 15px;
+            margin-bottom: 45px;
+            margin-left: 30px;
+        }
+
+        .logo:hover {
+            cursor: pointer;
+        }
+
+        i {
+            font-size: 17px;
+            color: rgb(108, 108, 108);
+            font-weight: 200;
+            margin-bottom: 35px;
+            margin-left: 45px;
+        }
+
+        .main {
+            width: 92vw;
+            min-height: 100vh;
+            background-color: rgb(0, 0, 0);
+            float: right;
+        }
+
+        .section-1 {
+            padding: 10px;
+            background-color: rgb(0, 0, 0);
+            display: flex;
+        }
+
+        .img{
+            width: 50%;
+            border-radius: 15px;
+            z-index: 5;
+        }
+
+        .grp {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-left: 20px;
+            margin-bottom: 150px;
+            color: white;
+        }
+
+        .img1 {
+            width: 40px;
+            border-radius: 2px;
+        }
+
+        .stream {
+            color: rgb(154, 154, 154);
+            font-size: 14px;
+        }
+
+        .data1 {
+            
+            margin-top: 85px;
+            margin-left: -200px;
+            color: white;
+            font-weight: 400;
+        }
+
+        .data2{
+            
+            margin-top: 120px;
+            margin-left: -335px;
+            font-weight: 400;
+        }
+
+        .trialer {
+            font-size: 20px;
+            margin-bottom: -350px;
+            margin-left: -120px;
+            background-color: #383c52;
+            border: none;
+            width: 130px;
+            padding: 10px;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .trialer:hover {
+            cursor: pointer;
+            background-color: #151528;
+        }
+
+        .img,
+        .watch,
+        .img1:hover {
+            cursor: pointer;
+        }
+
+        .section-2 {
+            min-height: 90vh;
+        }
+
+        .img3{
+            width: 100%;
+            position: sticky;
+            top: 0px;
+        }
+
+        .img3:hover {
+            cursor: pointer;
+        }
+
+        .section-2-1 {
+            width: 100%;
+            min-height: 200px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            bottom: 370px;
+            background: linear-gradient(to bottom, transparent, #00000079, #000000);
+        }
+
+        .now {
+            
+            color: rgb(70, 145, 250);
+            text-shadow: 0 0 20px black;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .now1 {
+            color: white;
+            
+            font-weight: 500;
+            font-size: 15px;
+        }
+
+        .data3 {
+            color: white;
+            
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .drama {
+            color: white;
+            
+        }
+
+        .watch {
+            margin-top: 30px;
+            font-size: 15px;
+            text-shadow: 0 0 50px rgb(0, 0, 0);
+            padding: 10px;
+            width: 300px;
+            border-radius: 7px;
+            border: none;
+            background: #009FFF;
+            background: -webkit-linear-gradient(to left, #ec2F4B, #009FFF);
+            background: linear-gradient(to left, #ec2F4B, #009FFF);
+            color: white;
+            font-weight: 600;
+        }
+
+        .sec3 {
+            width: 100%;
+            min-height: 250px;
+            background-color: black;
+            padding: 25px;
+            position: relative;
+            bottom: 370px;
+
+        }
+
+        .new{
+            font-size: 25px;
+            
+            color: white;
+            font-weight: 500;
+        }
+
+        .movie1{
+            padding: 20px 15px;
+            display: flex;
+            overflow: scroll;
+            gap: 20px;
+        }
+        .scroll,.scroll1 {
+            border-radius: 5px;
+            transition: 0.4s all ease;
+        }
+        .scroll1:hover{
+            scale: 1.2;
+            cursor: pointer;
+            border: 1px solid white;
+        }
+        .scroll:hover {
+            scale: 1.1;
+            cursor: pointer;
+            border: 2px solid white;
+        }
+        .nav-2{
+            display: flex;
+            gap: 10px;
+        }
+        .data{
+            color: white;
+            opacity: 0;
+            transition: 0.4s all ease;
+        }
+        .nav-1:hover{
+            z-index: 20;
+            cursor: pointer;
+            background: linear-gradient(to left, transparent, #000000,#000000,#000000);
+            .nav-2 i{
+                color: white;
+            }
+            .data{
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="nav-1">
+            <img src="logo.png" alt="" width="55px" class="logo">
+            <div class="nav-2">
+                <i class="fa-solid fa-house"></i>
+                <p class="data">Home</p>
+            </div>
+            <div class="nav-2">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <p class="data">Search</p>
+            </div>
+            <div class="nav-2">
+                <i class="fa-solid fa-tv"></i>
+                <p class="data">TV</p>
+            </div>
+            <div class="nav-2">
+                <i class="fa-solid fa-cookie"></i>
+                <p class="data">Movies</p>
+            </div>
+            <div class="nav-2">
+                <i class="fa-solid fa-person-running"></i>
+                <p class="data">Sports</p>
+            </div>
+            <div class="nav-2">
+                <i class="fa-solid fa-video"></i>
+                <p class="data">Sparks</p>
+            </div>
+            <div class="nav-2">
+                <i class="fa-solid fa-list"></i>
+                <p class="data">Categories</p>
+            </div>
+            <div class="nav-2">
+                <i class="fa-solid fa-circle-user"></i>
+                <p class="data">MySpace</p>
+            </div>
+        </nav>
+        <div class="main">
+            <!-- section1 -->
+            <div class="section-1">
+                <img src="3.jpg" alt="" class="img">
+                <div class="grp">
+                    <img src="2.png" alt="" class="img1">
+                    <div class="text">
+                        <p class="mb-0">Daredevil</p>
+                        <p class="stream mb-0">Streaming From March 5</p>
+                    </div>
+                    <p class="data1">Daredevil's secret life is on the line in this gripping</p>
+                    <p class="data2">superhero drama!</p>
+                    <button class="trialer">Trailer</button>
+                </div>
+            </div>
+            <!-- section2 -->
+            <div class="section-2">
+                <img src="4..avif" alt="" class="img3">
+                <div class="section-2-1">
+                    <img src="5.avif" alt="" width="250px">
+                    <p class="now">New Release</p>
+                    <b class="now1">2025 . U/A 16+ . 1 Season . English</b>
+                    <div class="data3">
+                        <p>After 4 years, Inspector Vincenzo Palmieri returns to </p>
+                        <p>Naples seeking closure. His bold methods clash with </p>
+                        <p>his rule-abiding boss, Superintendent Sonia Ascarelli.</p>
+                    </div>
+                    <b class="drama">Action | comedy | Mafia</b>
+                    <button class="watch">Subscribe to Watch</button>
+                </div>
+                <div class="sec3">
+                    <h5 class="new">Latest Releases</h5>
+                    <div class="movie1">
+                        <img src="6.avif" alt="" width="180px" class="scroll">
+                        
+                        <img src="8.avif" alt="" width="180px" class="scroll">
+                        <img src="9.avif" alt="" width="180px" class="scroll">
+                        <img src="10.avif" alt="" width="180px" class="scroll">
+                        <img src="11.avif" alt="" width="180px" class="scroll">
+                        <img src="12.avif" alt="" width="180px" class="scroll">
+                        <img src="13.avif" alt="" width="180px" class="scroll">
+                        
+                        <img src="15.avif" alt="" width="180px" class="scroll">
+                        <img src="16.avif" alt="" width="180px" class="scroll">
+                        <img src="17.avif" alt="" width="180px" class="scroll">
+                    </div>
+                    <h5 class="new">Studios</h5>
+                    <div class="movie1">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/5598/1739441155598-a" alt="" width="180px" class="scroll">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/5223/1535223-a-292dbf42783d" alt="" width="180px" class="scroll">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1080/sources/r1/cms/prod/5228/1535228-a-fb6607a8214c" alt="" width="180px" class="scroll">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/7816/1739359307816-a" alt="" width="180px" class="scroll">
+                        
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/5731/1739780835731-a" alt="" width="180px" class="scroll">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1080/sources/r1/cms/prod/5224/1535224-a-1d1cfe20ffa3" alt="" width="180px" class="scroll">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1080/sources/r1/cms/prod/5226/1535226-a-3080287f77cd" alt="" width="180px" class="scroll">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/583/1739358280583-a" alt="" width="180px" class="scroll">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1080/sources/r1/cms/prod/5225/1535225-a-58f3d258b91e" alt="" width="180px" class="scroll">
+                    </div>
+                    <h5 class="new">Action Movies</h5>
+                    <div class="movie1">
+                        <img src="18.webp" alt="" width="180px" class="scroll">
+                        <img src="19.webp" alt="" width="180px" class="scroll">
+                        <img src="20.webp" alt="" width="180px" class="scroll">
+                        <img src="21.webp" alt="" width="180px" class="scroll">
+                        <img src="22.webp" alt="" width="180px" class="scroll">
+                        <img src="23.webp" alt="" width="180px" class="scroll">
+                        <img src="24.webp" alt="" width="180px" class="scroll">
+                        <img src="25.webp" alt="" width="180px" class="scroll">
+                        <img src="26.webp" alt="" width="180px" class="scroll">
+                        <img src="27.webp" alt="" width="180px" class="scroll">
+                    </div>
+                    <h5 class="new">Popular Languages</h5>
+                    <div class="movie1">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/6661/1526661-a-00b818b5bc0e" alt="" width="180px" class="scroll">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/6660/1526660-a-afdd1ecfd8ae" alt="" width="180px" class="scroll">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/6682/1526682-a-fd4e220ba563" alt="" width="180px" class="scroll">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/6685/1526685-a-5f5995a53f61" alt="" width="180px" class="scroll">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1080/sources/r1/cms/prod/6668/1526668-a-ed367d61302a" alt="" width="180px" class="scroll">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/6660/1526660-a-afdd1ecfd8ae" alt="" width="180px" class="scroll">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/6661/1526661-a-00b818b5bc0e" alt="" width="180px" class="scroll">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/6682/1526682-a-fd4e220ba563" alt="" width="180px" class="scroll">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/6685/1526685-a-5f5995a53f61" alt="" width="180px" class="scroll">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1080/sources/r1/cms/prod/6668/1526668-a-ed367d61302a" alt="" width="180px" class="scroll">
+                    </div>
+                    <h5 class="new">Best Of Orginals</h5>
+                    <div class="movie1">
+                        <img src="28.avif" alt="" width="180px" class="scroll">
+                        <img src="29.avif" alt="" width="180px" class="scroll">
+                        <img src="30.avif" alt="" width="180px" class="scroll">
+                        <img src="31.avif" alt="" width="180px" class="scroll">
+                        <img src="32.webp" alt="" width="180px" class="scroll">
+                        <img src="33.webp" alt="" width="180px" class="scroll">
+                        <img src="34.webp" alt="" width="180px" class="scroll">
+                        <img src="35.webp" alt="" width="180px" class="scroll">
+                        <img src="36.webp" alt="" width="180px" class="scroll">
+                        <img src="37.avif" alt="" width="180px" class="scroll">
+                    </div>
+                    <h5 class="new">Studios</h5>
+                    <div class="movie1">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/5598/1739441155598-a" alt="" width="180px" class="scroll">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/5223/1535223-a-292dbf42783d" alt="" width="180px" class="scroll">
+                        
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1080/sources/r1/cms/prod/5226/1535226-a-3080287f77cd" alt="" width="180px" class="scroll">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1080/sources/r1/cms/prod/5228/1535228-a-fb6607a8214c" alt="" width="180px" class="scroll">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1080/sources/r1/cms/prod/5225/1535225-a-58f3d258b91e" alt="" width="180px" class="scroll">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/5731/1739780835731-a" alt="" width="180px" class="scroll">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/7816/1739359307816-a" alt="" width="180px" class="scroll">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/583/1739358280583-a" alt="" width="180px" class="scroll">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1080/sources/r1/cms/prod/5224/1535224-a-1d1cfe20ffa3" alt="" width="180px" class="scroll">
+                    </div>
+                    <h5 class="new">Global English Hits</h5>
+                    <div class="movie1">
+                        <img src="39.webp" alt="" width="180px" class="scroll">
+                        <img src="47.webp" alt="" width="180px" class="scroll">
+                        <img src="48.webp" alt="" width="180px" class="scroll">
+                        <img src="42.webp" alt="" width="180px" class="scroll">
+                        <img src="43.webp" alt="" width="180px" class="scroll">
+                        <img src="44.webp" alt="" width="180px" class="scroll">
+                        <img src="45.webp" alt="" width="180px" class="scroll">
+                        <img src="46.avif" alt="" width="180px" class="scroll">
+                        <img src="49.webp" alt="" width="180px" class="scroll">
+                        <img src="40.webp" alt="" width="180px" class="scroll">
+                    </div>
+                    <h5 class="new">Popular Languages</h5>
+                    <div class="movie1">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/6660/1526660-a-afdd1ecfd8ae" alt="" width="180px" class="scroll">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/6661/1526661-a-00b818b5bc0e" alt="" width="180px" class="scroll">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/6682/1526682-a-fd4e220ba563" alt="" width="180px" class="scroll">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/6685/1526685-a-5f5995a53f61" alt="" width="180px" class="scroll">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1080/sources/r1/cms/prod/6668/1526668-a-ed367d61302a" alt="" width="180px" class="scroll">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/6660/1526660-a-afdd1ecfd8ae" alt="" width="180px" class="scroll">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/6661/1526661-a-00b818b5bc0e" alt="" width="180px" class="scroll">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/6682/1526682-a-fd4e220ba563" alt="" width="180px" class="scroll">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/6685/1526685-a-5f5995a53f61" alt="" width="180px" class="scroll">
+                        <img src="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1080/sources/r1/cms/prod/6668/1526668-a-ed367d61302a" alt="" width="180px" class="scroll">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</body></html>
